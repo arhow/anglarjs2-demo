@@ -1,0 +1,20 @@
+<div class="widgets">
+        
+    <div class="row">
+        <ba-card baCardClass="with-scroll" class="smart-table-container">
+            <button type="button" class="btn btn-default" (click)="getTodayJournalSummary()">今天</button>
+            <button type="button" class="btn btn-default" (click)="getAllJournalSummary()">所有</button>
+        </ba-card>
+    </div>
+    <div class="row">
+        <ba-card title={{title}} baCardClass="with-scroll" class="smart-table-container">
+            <ng2-smart-table [settings]="settings" [source]="source" 
+            (deleteConfirm)="onDeleteConfirm($event)" 
+            (editConfirm)="onSaveConfirm($event)"
+            (createConfirm)="onCreateConfirm($event)"
+            (userRowSelect)="onUserRowSelect($event)"
+            ></ng2-smart-table>
+        </ba-card>
+    </div>
+
+</div>

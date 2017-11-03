@@ -1,0 +1,4 @@
+<div  style="position: fixed;
+width: 100%;
+height: 45px;
+z-index: 999;" *ngIf="message" [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-info': message.type === 'info','alert-warning': message.type === 'warning', 'alert-danger': message.type === 'error' }">{{message.text}}</div>
